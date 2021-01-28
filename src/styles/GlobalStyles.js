@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Roboto", sans-serif;
     margin: 0;
     background-color: #eff4f7;
+    overflow: hidden;
   }
   h1,
   h2,

@@ -46,20 +46,21 @@ const HeaderContainer = styled.div`
 `;
 
 const Wave = styled(HeroWave)`
-    width: 110%;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     position: absolute;
     z-index: 1;
-    bottom: -15em;
+    bottom: -28em;
     color: white;
 `;
 
 const Header = () => {
     return (
         <React.Fragment>
+            <Wave />
             <Navbar />
             <Headerstyle>
-
                 <Headeroverlay>
                     <HeaderContainer>
                         <Hero />       
@@ -69,5 +70,5 @@ const Header = () => {
         </React.Fragment>
     )
 }
-{/* <Wave /> */}
+
 export default Header
