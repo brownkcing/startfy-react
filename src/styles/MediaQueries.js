@@ -2,6 +2,8 @@ import { css } from 'styled-components'
 
 const sizes = {
   menuMax: 1382,
+  custom: 1200,
+  desktopPlus: 994,
   desktop: 992,
   tablet: 768,
   phone: 576,

@@ -4,6 +4,7 @@ import Color from '../../styles/Colors';
 import { mediaMax } from '../../styles/MediaQueries'
 
 const Navrightstyle = styled.ul`
+  font-size: 1.25rem;
   margin-right:2em;
   margin-left: 2em;
   list-style: none;
@@ -16,9 +17,16 @@ const Navrightstyle = styled.ul`
         text-decoration: none;
       }
   }
-  
+
   ${mediaMax.desktop`
-  margin-right: 5em;
+  margin-top: 0;
+  margin-right: 3em;
+  padding-left: 1.5em;
+  padding-top: 5em;
+  top: 0;
+  right: 1.4em;
+  height: 100vh;
+  width: 300px;
     li {
       padding: 1em 1.3em;
       display: block;
@@ -31,12 +39,7 @@ const Navrightstyle = styled.ul`
     background-color: ${Color.whiteish};
     position: fixed;
     transform: ${({ open }) => open ? 'translateX(40%)' : 'translateX(130%)'};
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 300px;
-    padding-top: 3.5rem;
-    transition: transform 0.3s ease-in-out;
+    transition: 0.3s all ease;
   `}
 `;
 

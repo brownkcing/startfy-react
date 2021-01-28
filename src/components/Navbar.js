@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import Logo from './nav/Logo';
 import Color from '../styles/Colors';
-import {mediaMax} from '../styles/MediaQueries'
+import { mediaMax } from '../styles/MediaQueries'
 import Burger from './nav/Burger';
 
 const Nav = styled.nav`
@@ -16,7 +16,7 @@ const Nav = styled.nav`
 
 const Navstyle = styled.nav`
   transition: 0.3s all ease;
-  padding: 1.1em 11em;
+  padding: 0 11em;
   display: flex;
   flex-wrap:wrap;
   justify-content: space-between;

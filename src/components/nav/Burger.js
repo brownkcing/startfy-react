@@ -7,7 +7,7 @@ import Color from '../../styles/Colors';
 const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
-  top: 1.5em;
+  top: 2.5em;
   display: none;
   cursor: pointer;
   position: fixed;
@@ -20,7 +20,7 @@ const StyledBurger = styled.div`
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
-    
+ 
   `}
   div {
     width: 2rem;
@@ -48,12 +48,11 @@ const Burger = () => {
   return (
     <React.Fragment>
       <Navright open={open}/>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <StyledBurger open={open} onClick={ () => setOpen(!open)}>
         <div />
         <div />
         <div />
       </StyledBurger>
-      
     </React.Fragment>
   )
 }

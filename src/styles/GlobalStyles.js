@@ -1,67 +1,34 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&family=Roboto:wght@300;400;700&display=swap')
   html {
-    font-family: 'Lato', sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   body {
+    font-family: "Roboto", sans-serif;
     margin: 0;
-    font-family: 'Lato', sans-serif;
     background-color: #eff4f7;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", sans-serif;
+  }
   * {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
   *:before {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
   *:after {
-    box-sizing: inherit;
-  }
-  
-  @media (max-width: 940px) {
-    .mobile-hide {
-      display: none;
-    }
-  }
-  @keyframes fadein {
-    from {
-      background-color: transparent;
-    }
-    to {
-      background-color: #ffffff;
-    }
-  }
-  
-  @keyframes fadeout {
-    from {
-      background-color: #ffffff;
-    }
-    to {
-      background-color: transparent;
-    }
-  }
-  @keyframes slidein {
-    from {
-      left: 100%;
-    }
-    to {
-      left: 0;
-    }
-  }
-  
-  @keyframes slideout {
-    from {
-      left: 0;
-    }
-    to {
-      left: 100%;
-    }
+    box-sizing: border-box;
   }
 `;
 

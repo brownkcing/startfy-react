@@ -1,0 +1,76 @@
+import React from 'react';
+import styled from 'styled-components';
+import Color from '../../styles/Colors';
+import { mediaMax, mediaMin } from '../../styles/MediaQueries'
+import HeroImage from '../../img/hero-img.png';
+
+const Herostyle = styled.div`
+    color: ${Color.whiteish};
+    width: 37rem;
+    h1 {
+        margin: 0;
+        font-size: 3.5rem;        
+        line-height: 1.2;
+    }
+
+    p {
+         font-size: 1.125rem;
+         margin-bottom: 3rem;
+    }
+
+    a { 
+        font-size: 1rem;
+        border: 2px solid #fff;
+        padding: 15px 30px !important;
+        background: none;
+        color: #fff;
+        text-decoration: none;
+        padding: .375rem .75rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        display: inline-block;
+
+        :hover { 
+            background: #fff;
+            color: #2d71a1;
+            transition: 0.3s all ease;
+        }
+    }
+    
+    ${mediaMax.custom`
+    width: 25rem;
+    `}
+
+    ${mediaMax.desktop`
+    width: 40rem;
+    text-align: center;
+    margin-top: 4em;
+    h1 {
+        margin: 0;
+        font-size: 2.5rem;        
+        line-height: 1.2;
+    }
+    `}
+`;
+
+const HeroImg = styled.img`
+    margin-bottom: 2em;
+    ${mediaMax.desktop`
+    display: none;
+    `}
+`;
+
+function Hero() {
+    return (
+        <React.Fragment>
+            <Herostyle>
+                <h1>A startup mentoring platform</h1>
+                <p>Still figuring out where to start? Let us help you kick it off!</p>
+                <a href="#pricing2" >Get started</a>
+            </Herostyle>
+            <HeroImg src={HeroImage}></HeroImg>
+        </React.Fragment>
+    )
+};
+
+export default Hero;

@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import Navbar from '../components/Navbar.js'
+import Navbar from '../components/Navbar.js';
+import Hero from './hero/Hero'
+import { ReactComponent as HeroWave } from './hero/wave.svg';
 import BackgroundImg from '../img/hero-bg.jpg';
 
 const Headerstyle = styled.div`
     background-image: url(${BackgroundImg});
-    height: 100vh;
+    height: 110vh;
     width: 100vw;
     padding: 140px 0px 100px;
     position: relative;
@@ -14,7 +16,7 @@ const Headerstyle = styled.div`
     background-position: center center;
 `;
 
-const Herooverlay = styled.div`
+const Headeroverlay = styled.div`
     position: absolute;
     height: 100%;
     width: 100%;
@@ -32,29 +34,40 @@ const Herooverlay = styled.div`
     justify-content: center;
     flex-direction: column;
 `;
-
-
 const HeaderContainer = styled.div`
-transition: 0.3s all ease;
+    transition: 0.3s all ease;
     display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px; 
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10em;
+    margin-left: 10em;
+    padding: 2em;
+`;
+
+const Wave = styled(HeroWave)`
+    width: 110%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    bottom: -15em;
+    color: white;
 `;
 
 const Header = () => {
     return (
         <React.Fragment>
-            <Navbar>
-            </Navbar>
+            <Navbar />
             <Headerstyle>
-                <Herooverlay>
+
+                <Headeroverlay>
                     <HeaderContainer>
+                        <Hero />       
                     </HeaderContainer>
-                </Herooverlay>
+                </Headeroverlay>
             </Headerstyle>
         </React.Fragment>
     )
 }
-
+{/* <Wave /> */}
 export default Header
