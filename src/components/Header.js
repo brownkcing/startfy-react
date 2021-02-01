@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../components/Navbar.js';
 import Hero from './hero/Hero'
+import {mediaMin} from '../styles/MediaQueries';
 import { ReactComponent as HeroWave } from './hero/wave.svg';
 import BackgroundImg from '../img/hero-bg.jpg';
 
@@ -35,23 +36,37 @@ const Headeroverlay = styled.div`
     flex-direction: column;
 `;
 const HeaderContainer = styled.div`
-    transition: 0.3s all ease;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    margin-right: 10em;
-    margin-left: 10em;
-    padding: 2em;
+    transition: 0.3s all ease;
+    ${mediaMin.phone`
+        max-width: 540px;
+    `};
+    ${mediaMin.tablet`
+        max-width: 720px;
+    `};
+    ${mediaMin.desktop`
+        max-width: 960px;
+    `};
+    ${mediaMin.custom`
+        max-width: 1140px;
+    `};
 `;
 
 const Wave = styled(HeroWave)`
     width: 100%;
-    height: 100%;
+    height: 50%;
     overflow: hidden;
     position: absolute;
     z-index: 1;
-    bottom: -28em;
+    bottom: -16em;
     color: white;
 `;
 

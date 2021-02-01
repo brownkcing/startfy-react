@@ -1,4 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
+// import { mediaMin, mediaMax } from '../styles/MediaQueries';
+
+// ${mediaMin.custom`
+// max-width: 1140px;
+// `};
+// ${mediaMin.desktop`
+// max-width: 960px;
+// `};
+// ${mediaMin.tablet`
+// max-width: 720px;
+// `};
+// ${mediaMin.phone`
+// max-width: 540px;
+// `};
 
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&family=Roboto:wght@300;400;700&display=swap')
@@ -8,12 +22,14 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
   body {
     font-family: "Roboto", sans-serif;
     margin: 0;
-    background-color: #eff4f7;
     overflow: hidden;
+    line-heights: 1.5;
   }
+
   h1,
   h2,
   h3,
@@ -21,6 +37,11 @@ const GlobalStyles = createGlobalStyle`
   h5,
   h6 {
     font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+
+  p{
+    color: #9fa1a4;
   }
   * {
     box-sizing: border-box;

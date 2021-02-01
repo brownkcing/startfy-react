@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Color from '../../styles/Colors';
-import { mediaMax, mediaMin } from '../../styles/MediaQueries'
+import { mediaMax } from '../../styles/MediaQueries'
 import HeroImage from '../../img/hero-img.png';
 
 const Herostyle = styled.div`
@@ -9,15 +9,14 @@ const Herostyle = styled.div`
     width: 37rem;
     h1 {
         margin: 0;
-        font-size: 3.5rem;        
+        font-size: 3.5rem;  
+        font-weight: 700;      
         line-height: 1.2;
     }
-
     p {
          font-size: 1.125rem;
          margin-bottom: 3rem;
     }
-
     a { 
         font-size: 1rem;
         border: 2px solid #fff;
@@ -65,7 +64,7 @@ function Hero() {
         <React.Fragment>
             <Herostyle>
                 <h1>A startup mentoring platform</h1>
-                <p>Still figuring out where to start? Let us help you kick it off!</p>
+                <p style={{color:'white'}}>Still figuring out where to start? Let us help you kick it off!</p>
                 <a href="#pricing2" >Get started</a>
             </Herostyle>
             <HeroImg src={HeroImage}></HeroImg>
