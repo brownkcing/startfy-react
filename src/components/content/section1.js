@@ -40,7 +40,7 @@ const Section1B = styled.div`
     }
 
     ${mediaMin.tablet`
-        max-width: 720px
+        max-width: 720px;
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
     `}
