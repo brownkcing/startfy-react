@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { mediaMin, mediaMax } from '../styles/MediaQueries'
 import IntroSection from '../components/intro/IntroSection'
 
-const Section = styled.div`
+const WrapperHealine = styled.div`
     padding: 7rem 0;
     display: flex;
     flex-wrap: wrap;
@@ -68,15 +68,15 @@ const IntroDesc = styled.p`
 
 function intro () {
     return (
-        <Section>
+        <WrapperHealine>
             <HeadlineContainer>
                 <IntroStyle>Startyfy is a mentor-driven acceleration program</IntroStyle>
                 <IntroDesc>Everybody can start something. It takes careful planning and hardwork to make it into fruition. 
                         We are here to guide and mentor you in such manner not only for your own growth as an entrepreneur, 
                         but to make sure your startup thrives.</IntroDesc>
-                <IntroSection></IntroSection>
+                <IntroSection />
             </HeadlineContainer>
-        </Section>
+        </WrapperHealine>
     );
 };
 

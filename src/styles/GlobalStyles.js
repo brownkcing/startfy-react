@@ -27,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Roboto", sans-serif;
     margin: 0;
     overflow: hidden;
-    line-heights: 1.5;
+    line-height: 1.5;
   }
 
   h1,
