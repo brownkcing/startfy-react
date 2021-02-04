@@ -11,7 +11,7 @@ const Section2Row = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8em;
-    &.methodology {
+    &:nth-child(3) {
         margin-top: 13em;
     }
     ${Mixins.row}
@@ -75,7 +75,7 @@ function Section2() {
                         is approached from both, a client and an agency perspective.</p>
                 </Section2a>
             </Section2Row>     
-            <Section2Row className='methodology'>
+            <Section2Row>
                 <Section2a>
                     <h2>Methodology</h2>
                     <p>Too many startups begin with an idea for a product that they think people want. They then 
