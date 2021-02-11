@@ -6,3 +6,7 @@ html {
   z-index: 2;
   position: relative;
 }
+
+Input.placeholdercss::placeholder {
+  color: rgb(128, 128, 128, 0.5);
+}
