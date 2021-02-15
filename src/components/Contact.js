@@ -7,9 +7,9 @@ import Form from '../components/contact/form';
 import Address from '../components/contact/address';
 
 const ContactWrapper = styled.div`
-    padding: 4em 0;
-    background: linear-gradient(to right, #8eaff1 0%, #d4f0f5 100%);
     ${Mixins.wrapper};
+    background: linear-gradient(to right, #8eaff1 0%, #d4f0f5 100%);
+    padding: 3em 0;
 `;
 
 const ContactContainer = styled.div`

@@ -5,7 +5,8 @@ import Intro from './components/Intro.js';
 import GlobalStyles from './styles/GlobalStyles';
 import Content from './components/Content';
 import Contact from './components/Contact';
-
+import CTA from './components/CTA';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <Intro />
       <Content />
       <Contact />
+      <CTA />
+      <Footer />
     </div>
   );
 }

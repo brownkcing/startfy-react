@@ -2,8 +2,7 @@ import styled, { css } from 'styled-components';
 import { mediaMax, mediaMin } from '../styles/MediaQueries';
 
 export const wrapper = css`
-  margin: 7rem 0;
-
+  padding: 7rem 0;
 `;
 
 export const container = css`

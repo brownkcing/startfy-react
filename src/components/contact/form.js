@@ -27,6 +27,7 @@ const Button = styled.button`
     text-decoration: none;
     letter-spacing: 0.1rem;
     cursor: pointer;
+    outline:none;
     :hover { 
         border: 0.1rem solid #fff;
         background: #d4e2ff;
