@@ -11,7 +11,6 @@ const ContentWrapper = styled.div`
 `;
 
 
-
 function Content() {
     return (
         <ContentWrapper>

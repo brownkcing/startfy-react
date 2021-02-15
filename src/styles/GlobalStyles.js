@@ -41,6 +41,15 @@ const GlobalStyles = createGlobalStyle`
     margin-bottom: 0;
   }
 
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  li {
+    display: list-item;
+  }
+
   p{
     color: #9fa1a4;
   }

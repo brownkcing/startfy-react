@@ -28,7 +28,6 @@ const Herostyle = styled.div`
         line-height: 1.5;
         border-radius: .25rem;
         display: inline-block;
-
         :hover { 
             background: #fff;
             color: #2d71a1;

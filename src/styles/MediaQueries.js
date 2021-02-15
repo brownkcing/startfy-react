@@ -6,7 +6,7 @@ const sizes = {
   desktopPlus: 994,
   desktop: 992,
   tablet: 768,
-  phone: 576,
+  phone: 576
 }
 
 export const mediaMax = Object.keys(sizes).reduce((acc, label) => {

@@ -6,8 +6,7 @@ import { mediaMin } from '../../styles/MediaQueries';
 
 
 const FormRow = styled.div`
-    ${Mixins.row}
-    
+    ${Mixins.row} 
 `;
 const FormStyle = styled.form`
     display: block;
@@ -15,11 +14,35 @@ const FormStyle = styled.form`
 `;
 
 const Button = styled.button`
+    margin-bottom: 1rem;
+    border: none;
+    padding: 0.5em 1em;
+    border: 0.1rem solid #8eaff1;
+    border-radius: .3rem;
+    color: #808080 ;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    :hover { 
+        border: 0.1rem solid #fff;
+        background: #d4e2ff;
+        color: #000;
+        transition: 0.3s all ease;
+    }
 `;
 
 const Label = styled.span`
     display: inline-block;
-    margin-bottom: .5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    display: block;
+    margin-bottom: 0.5em;
 `;
 
 const InputCss = css`
@@ -46,9 +69,8 @@ const TextArea = styled.textarea`
     ${InputCss};
     text-align: start;
     height: 12rem;
-
+    resize: none;
 `;
-
 
 const InputStyle = styled.div`
     display: block;
@@ -67,8 +89,6 @@ const InputStyle = styled.div`
 `;
 
 
-
-
 const Form = () => {
     return (
         <React.Fragment>
@@ -78,25 +98,32 @@ const Form = () => {
                         <Label>Name: </Label>
                         <Input 
                             placeholder="Name" 
-                            type='text'/>
+                            type='text'
+                            required/>
                     </InputStyle>
                     <InputStyle>
                         <Label>Email: </Label>
                         <Input 
                             placeholder="Email"
-                            type='email' />
+                            type='email'
+                            required />
                     </InputStyle>
                     <InputStyle>
                         <Label>Subject: </Label>
                         <Input 
                             placeholder="Subject"
-                            type='text' />
+                            type='text'
+                            required />
                     </InputStyle>
                     <InputStyle>
                         <Label>Message: </Label>
                         <TextArea 
                             placeholder="Messages"
-                            type='text' />
+                            type='text'
+                            required />
+                    </InputStyle>
+                    <InputStyle>
+                        <Button>Submit</Button>
                     </InputStyle>
                 </FormRow>
             </FormStyle>
