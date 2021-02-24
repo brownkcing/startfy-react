@@ -62,7 +62,6 @@ const HeaderContainer = styled.div`
 
 const Wave = styled(HeroWave)`
     width: 100%;
-    height: 50%;
     overflow: hidden;
     position: absolute;
     z-index: 1;

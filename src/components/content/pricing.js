@@ -130,7 +130,7 @@ const PriceSignup = styled.div`
 
 function Pricing() {
     return (
-        <PricingContainer>
+        <PricingContainer id='pricing'>
             <PricingRow>
                 <PriceTitle>
                     <h2>Choose a Plan</h2>

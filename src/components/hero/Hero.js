@@ -61,7 +61,7 @@ const HeroImg = styled.img`
 function Hero() {
     return (
         <React.Fragment>
-            <Herostyle>
+            <Herostyle id='home'>
                 <h1>A startup mentoring platform</h1>
                 <p style={{color:'white'}}>Still figuring out where to start? Let us help you kick it off!</p>
                 <a href="#pricing2" >Get started</a>

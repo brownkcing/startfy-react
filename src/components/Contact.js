@@ -59,7 +59,7 @@ const FormContainer2 = styled.div`
 
 export default function Contact() {
     return (
-        <ContactWrapper>
+        <ContactWrapper id='contact'>
             <ContactContainer>
                 <ContactRow>
                     <h2>Get in Touch With Us</h2>

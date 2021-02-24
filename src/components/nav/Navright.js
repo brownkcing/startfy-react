@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Color from '../../styles/Colors';
-import { mediaMax } from '../../styles/MediaQueries'
+import { mediaMax } from '../../styles/MediaQueries';
+import { Link} from 'react-scroll';
 
 const Navrightstyle = styled.ul`
   font-size: 1.25rem;
@@ -11,9 +12,10 @@ const Navrightstyle = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   li {
-    padding: 0.8em 1.3em;
+    padding: 0.5em 1.3em;
       a {
-        color: ${Color.light};
+        cursor: pointer;
+        color:${({ scrolled }) => scrolled ? `${Color.darkest}` : `${Color.whiteish}` };
         text-decoration: none;
       }
   }
@@ -45,13 +47,13 @@ const Navrightstyle = styled.ul`
 
 
 
-const Navright = ({open}) => {
+const Navright = ({open, scrolled}) => {
     return (
-            <Navrightstyle open={open}>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+            <Navrightstyle open={open} scrolled={scrolled}>
+                <li><Link activeClass="active" to="home" spy={true} smooth='easeInOutQuint' duration={1500}>Home</Link></li>
+                <li><Link activeClass="active" to="features" spy={true} smooth='easeInOutQuint' duration={1500}>Features</Link></li>
+                <li><Link activeClass="active" to="pricing" spy={true} smooth='easeInOutQuint' duration={1500}>Pricing</Link></li>
+                <li><Link activeClass="active" to="contact" spy={true} smooth='easeInOutQuint' duration={1500}>Contact</Link></li>
             </Navrightstyle>
     );
 }

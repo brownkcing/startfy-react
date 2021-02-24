@@ -50,7 +50,7 @@ const Section2Image = styled.img`
 
 function Section2() {
     return (
-        <Section2Container>
+        <Section2Container id='features'>
             <Section2Row>
                 <Section2a>
                     <h2>Pitch Coaching</h2>

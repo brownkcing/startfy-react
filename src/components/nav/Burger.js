@@ -7,7 +7,7 @@ import Color from '../../styles/Colors';
 const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
-  top: 2.5em;
+  top: 1.75em;
   display: none;
   cursor: pointer;
   position: fixed;
@@ -25,7 +25,7 @@ const StyledBurger = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => open ? `${Color.dark}` : `${Color.whiteish}` };
+    background-color: ${({ scrolled, open }) => scrolled ? (`${Color.darker}`) : (open ? `${Color.darker}`: `${Color.whiteish}`) };
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
@@ -42,13 +42,13 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = () => {
+const Burger = ({scrolled}) => {
   const [open, setOpen] = useState(false)
   
   return (
     <React.Fragment>
-      <Navright open={open}/>
-      <StyledBurger open={open} onClick={ () => setOpen(!open)}>
+    <Navright open={open} scrolled={scrolled}/>
+      <StyledBurger open={open} scrolled={scrolled} onClick={ () => setOpen(!open)}>
         <div />
         <div />
         <div />

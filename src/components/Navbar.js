@@ -1,21 +1,45 @@
-import React from 'react';
-import styled from 'styled-components'
+import React, { useEffect } from 'react';
+import styled, { ThemeProvider } from 'styled-components'
 import Logo from './nav/Logo';
 import Color from '../styles/Colors';
-import { mediaMax } from '../styles/MediaQueries'
+import { mediaMax, mediaMin } from '../styles/MediaQueries'
 import Burger from './nav/Burger';
+import { useState } from 'react';
 
 const Nav = styled.nav`
-  position: absolute;
+  transition: 0.3s all ease;
+  position: ${({ theme }) => theme.position};
   width: 100%;
-  height: 12vh;
+  height: 11vh;
   z-index: 1999;
-  color: ${Color.light};
+  color: ${({ theme }) => theme.text};
+  box-shadow: ${({ theme }) => theme.shadow};
   box-sizing: border-box;
+  background-color: ${({ theme }) => theme.bgColor};
+
+  ${mediaMax.phone`
+     height: 16vh;
+  `}
 `;
 
+const navNotScrolled = {
+  position: 'absolute',
+  text : 'white',
+  bgColor: 'none',
+  navColor: 'white',
+  shadow: 'none'
+};
+
+const navScrolled = {
+  position: 'fixed',
+  text : 'black',
+  bgColor: 'white',
+  navColor: 'black',
+  shadow: '0.25px 0 0.85em -0.25em rgb(0 0 0 / 50%)'
+};
+
+
 const Navstyle = styled.nav`
-  transition: 0.3s all ease;
   padding: 0 11em;
   display: flex;
   flex-wrap:wrap;
@@ -23,11 +47,11 @@ const Navstyle = styled.nav`
   
   
   ${mediaMax.menuMax`
-    padding: 1em 1em;
+    padding: 0 1em;
   `}
 
   ${mediaMax.desktop`
-    padding: 1em 3em;
+    padding: 0 3em;
   `}
 
   ${mediaMax.phone`
@@ -35,15 +59,30 @@ const Navstyle = styled.nav`
 `}
 `;
 
-const Navbar = () => {
+function Navbar() {
+  const [scrolled, setScrolled] = useState (false);
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 1 ) {
+      setScrolled(true);
+    }
+    else{
+      setScrolled(false);
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('scroll',handleScroll)
+  })
     return (
-      <Nav>
-        <Navstyle>
-          <Logo></Logo>
-          <Burger>
-          </Burger>
-	      </Navstyle> 
-      </Nav>
+      <ThemeProvider theme = { scrolled === false ? navNotScrolled : navScrolled}>
+        <Nav>
+          <Navstyle>
+            <Logo></Logo>
+            <Burger scrolled = {scrolled}>
+            </Burger>
+	        </Navstyle> 
+        </Nav>
+      </ThemeProvider>
     );
   }
 
