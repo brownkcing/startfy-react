@@ -4,6 +4,14 @@ import Color from '../../styles/Colors';
 import { mediaMax } from '../../styles/MediaQueries';
 import { Link} from 'react-scroll';
 
+const Linking = styled(Link).attrs({
+  activeClass: "active",
+  spy: true, 
+  smooth:'easeInOutQuint', 
+  duration: 1500
+})`
+`;
+
 const Navrightstyle = styled.ul`
   font-size: 1.25rem;
   margin-right:2em;
@@ -50,10 +58,10 @@ const Navrightstyle = styled.ul`
 const Navright = ({open, scrolled}) => {
     return (
             <Navrightstyle open={open} scrolled={scrolled}>
-                <li><Link activeClass="active" to="home" spy={true} smooth='easeInOutQuint' duration={1500}>Home</Link></li>
-                <li><Link activeClass="active" to="features" spy={true} smooth='easeInOutQuint' duration={1500}>Features</Link></li>
-                <li><Link activeClass="active" to="pricing" spy={true} smooth='easeInOutQuint' duration={1500}>Pricing</Link></li>
-                <li><Link activeClass="active" to="contact" spy={true} smooth='easeInOutQuint' duration={1500}>Contact</Link></li>
+                <li><Linking offset={-290} to="home" >Home</Linking></li>
+                <li><Linking  to="features" >Features</Linking></li>
+                <li><Linking  to="pricing" >Pricing</Linking></li>
+                <li><Linking  to="contact" >Contact</Linking></li>
             </Navrightstyle>
     );
 }

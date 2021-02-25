@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import AOS from 'aos';
 import Color from '../../styles/Colors';
 import { mediaMax } from '../../styles/MediaQueries'
 import HeroImage from '../../img/hero-img.png';
@@ -62,11 +63,11 @@ function Hero() {
     return (
         <React.Fragment>
             <Herostyle id='home'>
-                <h1>A startup mentoring platform</h1>
-                <p style={{color:'white'}}>Still figuring out where to start? Let us help you kick it off!</p>
-                <a href="#pricing2" >Get started</a>
+                <h1 data-aos="fade-right" data-aos-duration="1000" >A startup mentoring platform</h1>
+                <p data-aos="fade-right" data-aos-duration="1800" style={{color:'white'}}>Still figuring out where to start? Let us help you kick it off!</p>
+                <a data-aos="fade-right" data-aos-duration="2000" href="#pricing2" >Get started</a>
             </Herostyle>
-            <HeroImg src={HeroImage}></HeroImg>
+            <HeroImg src={HeroImage} data-aos="fade-right" data-aos-duration="1000"></HeroImg>
         </React.Fragment>
     )
 };

@@ -63,21 +63,21 @@ function Section1 () {
         <SectionContainer>
             <SectionRow>
                 <Section1A>
-                    <Section1Image src={Process} />
+                    <Section1Image src={Process} data-aos="fade-in" data-aos-duration="1000" data-aos-once="true"/>
                 </Section1A>
             </SectionRow>
             <SectionRow>
-                <Section1B>
+                <Section1B data-aos="fade-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="500">
                     <span>01</span>
                     <h3>Sign Up with our Program</h3>
                     <p>Sign up to our 3 or 6 months program</p>
                 </Section1B>
-                <Section1B>
+                <Section1B data-aos="fade-in" data-aos-duration="1000" data-aos-once="true"data-aos-delay="1000">
                     <span>02</span>
                     <h3>Attend Seminars and Meetups</h3>
                     <p>As you learn, we extend our knowledge with meetups alongside other succesful entrepreneur</p>
                 </Section1B>
-                <Section1B>
+                <Section1B data-aos="fade-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="1500">
                     <span>03</span>
                     <h3>Ready to Startup</h3>
                     <p>At the end of the program, you will be able to start your business with confident and our guarantee.</p>

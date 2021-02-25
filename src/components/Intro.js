@@ -1,4 +1,5 @@
 import React from 'react';
+import 'aos/dist/aos.css';
 import styled from 'styled-components';
 import { mediaMin, mediaMax } from '../styles/MediaQueries'
 import IntroSection from '../components/intro/IntroSection'
@@ -70,8 +71,8 @@ function intro () {
     return (
         <WrapperHealine>
             <HeadlineContainer>
-                <IntroStyle>Startyfy is a mentor-driven acceleration program</IntroStyle>
-                <IntroDesc>Everybody can start something. It takes careful planning and hardwork to make it into fruition. 
+                <IntroStyle data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Startyfy is a mentor-driven acceleration program</IntroStyle>
+                <IntroDesc data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">Everybody can start something. It takes careful planning and hardwork to make it into fruition. 
                         We are here to guide and mentor you in such manner not only for your own growth as an entrepreneur, 
                         but to make sure your startup thrives.</IntroDesc>
                 <IntroSection />

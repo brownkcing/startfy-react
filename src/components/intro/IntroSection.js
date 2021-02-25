@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import 'aos/dist/aos.css';
 import { mediaMin, mediaMax } from '../../styles/MediaQueries'
 import IntroImg1 from '../../img/icon_2.png';
 import IntroImg2 from '../../img/icon_1.png';
@@ -50,8 +51,8 @@ const Sec = styled.div`
 `;
 function IntroSection() {
     return (
-        <SecStyle >
-            <Sec>
+        <SecStyle data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+            <Sec >
                 <IconImage className='icon1'/><h3>Business Valuation</h3><p>Valuate your business pitch with our experienced business leaders and incorporate their insights.</p>
             </Sec>
             <Sec>

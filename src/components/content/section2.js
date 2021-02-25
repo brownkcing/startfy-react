@@ -52,7 +52,7 @@ function Section2() {
     return (
         <Section2Container id='features'>
             <Section2Row>
-                <Section2a>
+                <Section2a data-aos="fade-down" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500">
                     <h2>Pitch Coaching</h2>
                     <p>We re-work your pitch in line with our framework in three stages - creating clarity, 
                         communicating the opportunity and demonstrating the validation. For each stage, we make 
@@ -61,11 +61,11 @@ function Section2() {
                         expect our participants to re-work different elements of their pitch and their business in 
                         preparation for the next session.</p>
                 </Section2a>
-                <Section2b><Section2Image src={Pitch} /></Section2b>
+                <Section2b><Section2Image src={Pitch} data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500" /></Section2b>
             </Section2Row>
             <Section2Row>
-                <Section2b><Section2Image src={Marketing} /></Section2b>
-                <Section2a>
+                <Section2b><Section2Image src={Marketing} data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500" /></Section2b>
+                <Section2a data-aos="fade-left" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500">
                     <h2>The Marketing Strategy</h2>
                     <p>Our practical marketing course, specifically more on digital marketing, covers key aspects 
                         of marketing, showing you how to integrate and reach customers and grow revenues. It is 
@@ -76,7 +76,7 @@ function Section2() {
                 </Section2a>
             </Section2Row>     
             <Section2Row>
-                <Section2a>
+                <Section2a data-aos="fade-down" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500">
                     <h2>Methodology</h2>
                     <p>Too many startups begin with an idea for a product that they think people want. They then 
                         spend months, sometimes years, perfecting that product without ever showing the product, 
@@ -85,7 +85,7 @@ function Section2() {
                         hands faster. Our method teaches you how to drive a startup-how to steer, when to turn, 
                         and when to persevere-and grow a business with maximum acceleration.</p>
                 </Section2a>
-                <Section2b><Section2Image src={Methodology} /></Section2b>
+                <Section2b><Section2Image src={Methodology} data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500" /></Section2b>
             </Section2Row> 
         </Section2Container>
     )

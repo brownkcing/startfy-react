@@ -1,5 +1,5 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
 import './App.css';
 import Header from './components/Header.js';
 import Intro from './components/Intro.js';
@@ -11,6 +11,10 @@ import Footer from './components/Footer';
 import Up from './components/Up';
 
 function App() {
+  useEffect (() => {
+    AOS.init();
+    AOS.refresh();
+  },[])
   return (
     <div className="App">
       <GlobalStyles />

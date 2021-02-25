@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import 'aos/dist/aos.css'
 import * as Mixins from '../../styles/Mixins';
 import { mediaMin } from '../../styles/MediaQueries';
 
@@ -131,14 +132,14 @@ const PriceSignup = styled.div`
 function Pricing() {
     return (
         <PricingContainer id='pricing'>
-            <PricingRow>
+            <PricingRow data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500">
                 <PriceTitle>
                     <h2>Choose a Plan</h2>
                     <p>You can sign-up for our 3-months trial program or our full course of 6 months.</p>
                 </PriceTitle>
             </PricingRow>
             <PricingRow>
-                <PriceSignup>
+                <PriceSignup data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000">
                     <div>
                         <span>Normal</span>
                         <h3>3-months-program</h3>
@@ -153,7 +154,7 @@ function Pricing() {
                         
                     </div>
                 </PriceSignup>
-                <PriceSignup>
+                <PriceSignup data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1500">
                     <div>
                         <span>Most Popular</span>
                         <h3>6-months-program</h3>
@@ -167,7 +168,7 @@ function Pricing() {
                         </div>
                     </div>
                 </PriceSignup>
-                <PriceSignup>
+                <PriceSignup data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="2000">
                     <div>
                         <span>Best Value</span>
                         <h3>6-months program++</h3>

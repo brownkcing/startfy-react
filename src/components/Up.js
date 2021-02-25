@@ -54,7 +54,7 @@ export default function Up() {
           })
     return (
         <ThemeProvider theme = { scrolled === false ? navNotScrolled : navScrolled}>
-            <UpIcon activeClass="active" to="home" spy={true} smooth='easeInOutQuint' duration={1500}>
+            <UpIcon offset={-280} activeClass="active" to="home" spy={true} smooth='easeInOutQuint' duration={1500}>
                  <IconArrow icon="icofont-simple-up" />
             </UpIcon>
         </ThemeProvider>
