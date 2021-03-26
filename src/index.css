@@ -1,3 +1,8 @@
+#modal-root {
+  position: relative;
+  z-index: 999;
+}
+
 html {
   overflow-x: hidden;
 }

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import 'aos/dist/aos.css'
 import * as Mixins from '../../styles/Mixins';
 import { mediaMin } from '../../styles/MediaQueries';
+import Modal from  '../modal/Modal';
 
 const PricingContainer = styled.div`
     margin-top: 16em;
@@ -71,8 +72,6 @@ const PriceSignup = styled.div`
                 text-align: center;
                 left: 0;
                 p {
-                    margin-top: 0;
-                    margin-bottom: 1rem;
                      a {
                         text-decoration: none;
                         background: #fff;
@@ -129,7 +128,19 @@ const PriceSignup = styled.div`
 `;
 
 
+const Button = styled.p`
+    color-background: black;
+    margin-top: 0;
+    margin-bottom: 1rem;
+`;
+
 function Pricing() {
+    const [ showModal, setShowModal ] = useState(false);
+
+    const openModal = () => {
+        setShowModal(prev => !prev);
+      };
+
     return (
         <PricingContainer id='pricing'>
             <PricingRow data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500">
@@ -149,7 +160,8 @@ function Pricing() {
                         </ul>
                         <div>
                             <strong>$399</strong>
-                            <p><a href="#">Choose Plan</a></p>
+                            <Button><a onClick={openModal}>Choose Plan</a></Button>
+                            <Modal showModal={showModal} setShowModal={setShowModal} />
                         </div>
                         
                     </div>
@@ -164,7 +176,8 @@ function Pricing() {
                             <li>Free entry to paid events for a limited time</li>
                         </ul>
                         <div><strong>$699</strong>
-                            <p><a href='#choose'>Choose Plan</a></p>
+                            <Button onClick={openModal}><a href='#choose'>Choose Plan</a></Button>
+                            <Modal showModal={showModal} setShowModal={setShowModal} />
                         </div>
                     </div>
                 </PriceSignup>
@@ -178,7 +191,8 @@ function Pricing() {
                             <li>Free entry to paid events for a year</li>
                         </ul>
                         <div><strong>$1299</strong>
-                            <p><a href='#choose'>Choose Plan</a></p>
+                            <Button onClick={openModal}><a href='#choose'>Choose Plan</a></Button>
+                            <Modal showModal={showModal} setShowModal={setShowModal} />
                         </div>
                     </div>
                 </PriceSignup>
