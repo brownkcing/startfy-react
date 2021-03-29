@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header.js';
 import Intro from './components/Intro.js';
@@ -9,6 +10,8 @@ import Contact from './components/Contact';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Up from './components/Up';
+import Profile from './components/authentication/profile';
+import ProtectedRoute from './components/authentication/protected-route';
 
 function App() {
   useEffect (() => {
@@ -20,8 +23,11 @@ function App() {
       <GlobalStyles />
       <Header />
       <Intro />
-      <Content />
-      <Contact />
+      <Switch>
+        <Content />
+        <Contact />
+        <ProtectedRoute path="/profile" component={Profile} />
+      </Switch>
       <CTA />
       <Footer />
       <Up />
