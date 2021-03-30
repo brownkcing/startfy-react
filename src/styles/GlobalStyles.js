@@ -29,6 +29,19 @@ const GlobalStyles = createGlobalStyle`
     overflow: hidden;
     line-height: 1.5;
   }
+  
+  input {
+    font-size: 1rem;
+    height: 2em;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    &:focus {
+      outline-width: 0;
+      border-bottom: 2px solid gray;
+    }
+  }
 
   h1,
   h2,

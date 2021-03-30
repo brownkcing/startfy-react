@@ -26,8 +26,9 @@ function Modal({ children, toggle, open }) {
     <Portal>
       {open && (
         <StyledModal.ModalWrapper onClick={toggle}>
+         
           <StyledModal.ModalBody onClick={event => event.stopPropagation()}>
-            <StyledModal.CloseButton onClick={toggle}>
+          <StyledModal.CloseButton onClick={toggle}>
               &times;
             </StyledModal.CloseButton>
             {children}

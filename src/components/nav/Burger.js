@@ -15,6 +15,10 @@ const StyledBurger = styled.div`
   transition: 0.3s all ease;
   right: ${({ open }) => open ? '2em' : '4em'};
   
+  ${mediaMax.phone`
+    top: 1em;
+  `}
+  
 
  ${mediaMax.desktop`
     display: flex;

@@ -13,6 +13,10 @@ const Logos = styled.h1`
         flex-flow: row nowrap;
         position: relative;
     `}
+    ${mediaMax.phone`
+    font-size: 1.2em;
+    padding: 0 .3em;
+    `}
 `;
 
 function Logo (){

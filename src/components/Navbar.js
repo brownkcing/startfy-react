@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components'
 import Logo from './nav/Logo';
-import Color from '../styles/Colors';
-import { mediaMax, mediaMin } from '../styles/MediaQueries'
+import { mediaMax } from '../styles/MediaQueries'
 import Burger from './nav/Burger';
 import { useState } from 'react';
 
@@ -10,7 +9,7 @@ const Nav = styled.nav`
   transition: 0.3s all ease;
   position: ${({ theme }) => theme.position};
   width: 100%;
-  height: 15vh;
+  height: 12vh;
   z-index: 1999;
   color: ${({ theme }) => theme.text};
   box-shadow: ${({ theme }) => theme.shadow};
@@ -18,7 +17,7 @@ const Nav = styled.nav`
   background-color: ${({ theme }) => theme.bgColor};
 
   ${mediaMax.phone`
-     height: 16vh;
+     height: 10vh;
   `}
 `;
 

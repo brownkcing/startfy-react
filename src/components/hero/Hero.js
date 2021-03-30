@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import AOS from 'aos';
 import Color from '../../styles/Colors';
 import { mediaMax } from '../../styles/MediaQueries'
 import HeroImage from '../../img/hero-img.png';
+import { Link } from 'react-scroll';
 
 const Herostyle = styled.div`
     color: ${Color.whiteish};
@@ -52,6 +52,7 @@ const Herostyle = styled.div`
     `}
 `;
 
+
 const HeroImg = styled.img`
     margin-bottom: 2em;
     ${mediaMax.desktop`
@@ -64,8 +65,8 @@ function Hero() {
         <React.Fragment>
             <Herostyle id='home'>
                 <h1 data-aos="fade-right" data-aos-duration="1000" >A startup mentoring platform</h1>
-                <p data-aos="fade-right" data-aos-duration="1800" style={{color:'white'}}>Still figuring out where to start? Let us help you kick it off!</p>
-                <a data-aos="fade-right" data-aos-duration="2000" href="#pricing2" >Get started</a>
+                <p data-aos="fade-right" data-aos-duration="1200" style={{color:'white'}}>Still figuring out where to start? Let us help you kick it off!</p>
+                <a data-aos-once="true" data-aos="fade-right" data-aos-duration="1200" href="#pricing2" >Get started</a>
             </Herostyle>
             <HeroImg src={HeroImage} data-aos="fade-right" data-aos-duration="1000"></HeroImg>
         </React.Fragment>

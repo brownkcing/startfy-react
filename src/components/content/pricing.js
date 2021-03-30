@@ -3,10 +3,9 @@ import styled from 'styled-components';
 import 'aos/dist/aos.css'
 import * as Mixins from '../../styles/Mixins';
 import { mediaMin } from '../../styles/MediaQueries';
-import LoginButton from '../authentication/login-button';
 import useToggle from '../modal/useToggle';
 import Modal from '../modal/Modal';
-import AuthNav from '../modal/ModalContent';
+import RegForm from '../authentication/RegForm';
 
 const PricingContainer = styled.div`
     margin-top: 16em;
@@ -134,7 +133,7 @@ const PriceSignup = styled.div`
 
 
 function Pricing() {
-    // const [open, setOpen] = useToggle(false);
+    const [open, setOpen] = useToggle(false);
     return (
         <PricingContainer id='pricing'>
             <PricingRow data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500">
@@ -154,7 +153,7 @@ function Pricing() {
                         </ul>
                         <div>
                             <strong>$399</strong>
-                            <p><LoginButton /></p>
+                            <p><button type="button" onClick={() => setOpen()}>Choose Plan</button></p>
                         </div>
                     </div>
                 </PriceSignup>
@@ -168,7 +167,7 @@ function Pricing() {
                             <li>Free entry to paid events for a limited time</li>
                         </ul>
                         <div><strong>$699</strong>
-                            <p><a href='#choose'>Choose Plan</a></p>
+                            <p><button type="button" onClick={() => setOpen()}>Choose Plan</button></p>
                         </div>
                     </div>
                 </PriceSignup>
@@ -182,15 +181,15 @@ function Pricing() {
                             <li>Free entry to paid events for a year</li>
                         </ul>
                         <div><strong>$1299</strong>
-                            <p><a href='#choose'>Choose Plan</a></p>
+                            <p><button type="button" onClick={() => setOpen()}>Choose Plan</button></p>
                         </div>
                     </div>
                 </PriceSignup>
-                    {/* {open && (
+                    {open && (
                         <Modal open={open} toggle={setOpen}>
-                            <AuthNav />
+                            <RegForm />
                         </Modal>
-                        )} */}
+                        )}
             </PricingRow>
         </PricingContainer>
     )   
