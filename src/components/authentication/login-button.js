@@ -10,7 +10,7 @@ const LoginButton = () => {
         screen_hint: "signup",
       })}
     >
-      Log In
+      Choose Plan
     </button>
   );
 };

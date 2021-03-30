@@ -3,21 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Auth0Provider } from "@auth0/auth0-react";
+import Auth0ProviderWithHistory from './components/authentication/auth0-provider-with-history';
 import { BrowserRouter } from 'react-router-dom';
-
-const domain = process.env.REACT_APP_AUTH0_DOMAIN
-const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID
 
 ReactDOM.render(
   <BrowserRouter>
-    <Auth0Provider
-      domain={domain}
-      clientId={clientId}
-      redirectUri={window.location.origin}
-    >    
+    <Auth0ProviderWithHistory>    
         <App />
-    </Auth0Provider>
+    </Auth0ProviderWithHistory>
   </BrowserRouter>,
   document.getElementById('root')
 );
