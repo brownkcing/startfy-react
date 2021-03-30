@@ -132,7 +132,7 @@ const PriceSignup = styled.div`
 
 
 function Pricing() {
-    const [open, setOpen] = useToggle(false);
+    // const [open, setOpen] = useToggle(false);
     return (
         <PricingContainer id='pricing'>
             <PricingRow data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500">
@@ -157,11 +157,11 @@ function Pricing() {
                         
                     </div>
                 </PriceSignup>
-                {open && (
-        <Modal open={open} toggle={setOpen}>
-          <h1>Hello Modal</h1>
-        </Modal>
-      )}
+                        {open && (
+                            <Modal open={open} toggle={setOpen}>
+                                <h1>Hello Modal</h1>
+                            </Modal>
+                        )}
                 <PriceSignup data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1500">
                     <div>
                         <span>Most Popular</span>
