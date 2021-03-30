@@ -24,10 +24,8 @@ function App() {
       <Header />
       <Intro />
       <Content />
-      <Contact />  
-      <Switch>
-        <Route path="/profile" component={Profile} />
-      </Switch>
+      <Contact />
+      <Route path="/profile" component={Profile} />
       <CTA />
       <Footer />
       <Up />
