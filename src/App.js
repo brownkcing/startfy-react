@@ -23,9 +23,9 @@ function App() {
       <GlobalStyles />
       <Header />
       <Intro />
+      <Content />
+      <Contact />  
       <Switch>
-        <Content />
-        <Contact />
         <Route path="/profile" component={Profile} />
       </Switch>
       <CTA />
