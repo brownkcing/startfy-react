@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import 'aos/dist/aos.css'
 import * as Mixins from '../../styles/Mixins';
 import { mediaMin } from '../../styles/MediaQueries';
+import LoginButton from '../authentication/login-button';
 import useToggle from '../modal/useToggle';
 import Modal from '../modal/Modal';
+import AuthNav from '../modal/ModalContent';
 
 const PricingContainer = styled.div`
     margin-top: 16em;
@@ -132,7 +134,7 @@ const PriceSignup = styled.div`
 
 
 function Pricing() {
-    const [open, setOpen] = useToggle(false);
+    // const [open, setOpen] = useToggle(false);
     return (
         <PricingContainer id='pricing'>
             <PricingRow data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500">
@@ -152,16 +154,10 @@ function Pricing() {
                         </ul>
                         <div>
                             <strong>$399</strong>
-                            <p><button type="button" onClick={() => setOpen()}>Choose Plan</button></p>
+                            <p><LoginButton /></p>
                         </div>
-                        
                     </div>
                 </PriceSignup>
-                {open && (
-        <Modal open={open} toggle={setOpen}>
-          <h1>Hello Modal</h1>
-        </Modal>
-      )}
                 <PriceSignup data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1500">
                     <div>
                         <span>Most Popular</span>
@@ -190,6 +186,11 @@ function Pricing() {
                         </div>
                     </div>
                 </PriceSignup>
+                    {/* {open && (
+                        <Modal open={open} toggle={setOpen}>
+                            <AuthNav />
+                        </Modal>
+                        )} */}
             </PricingRow>
         </PricingContainer>
     )   

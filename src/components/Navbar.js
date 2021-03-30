@@ -10,7 +10,7 @@ const Nav = styled.nav`
   transition: 0.3s all ease;
   position: ${({ theme }) => theme.position};
   width: 100%;
-  height: 11vh;
+  height: 15vh;
   z-index: 1999;
   color: ${({ theme }) => theme.text};
   box-shadow: ${({ theme }) => theme.shadow};
@@ -55,7 +55,7 @@ const Navstyle = styled.nav`
   `}
 
   ${mediaMax.phone`
-  padding: 1em 3em;
+  padding: 0 3em;
 `}
 `;
 
