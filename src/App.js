@@ -10,7 +10,7 @@ import Contact from './components/Contact';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Up from './components/Up';
-import Profile from './components/authentication/Profile';
+import Profile from './components/authentication/profile';
 
 
 function App() {
