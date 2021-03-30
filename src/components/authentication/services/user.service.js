@@ -1,7 +1,7 @@
 import axios from "axios";
 import authHeader from "./auth-header";
 
-const API_URL = "https://mernauthbackend.herokuapp.com/test/";
+const API_URL = "https://startyfy-react.herokuapp.com/test/";
 
 const getPublicContent = () => {
   return axios.get(API_URL + "all");
