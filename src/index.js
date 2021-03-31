@@ -10,7 +10,7 @@ import Profile from './components/authentication/Profile';
 ReactDOM.render(
   <BrowserRouter> 
       <Switch> 
-        <Route path="/">
+        <Route exact path="/">
           <App />
         </Route>
         <Route exact path="/profile">
