@@ -10,16 +10,13 @@ import Profile from './components/authentication/Profile';
 ReactDOM.render(
   <BrowserRouter> 
       <Switch> 
-        <Route exact path="/">
-          <App />
-        </Route>
-        <Route exact path="/profile">
-          <Profile />
-        </Route>
+        <App />
+        <Route path="/profile" component={Profile} />  
       </Switch>    
   </BrowserRouter>,
   document.getElementById('root')
 );
+
 
 
 // If you want to start measuring performance in your app, pass a function
