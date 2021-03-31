@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'aos/dist/aos.css'
+import { Switch, Route } from 'react-router-dom';
+import Profile from '../authentication/Profile';
 import * as Mixins from '../../styles/Mixins';
 import { mediaMin } from '../../styles/MediaQueries';
 import useToggle from '../modal/useToggle';
