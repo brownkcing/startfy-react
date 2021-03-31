@@ -10,7 +10,7 @@ import Contact from './components/Contact';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Up from './components/Up';
-import Profile from './components/authentication/profile';
+import Profile from './components/authentication/Profile';
 
 
 function App() {
@@ -25,9 +25,6 @@ function App() {
       <Intro />
       <Content />
       <Contact />
-      <Switch>
-        <Route path="/profile" component={Profile} />
-      </Switch>
       <CTA />
       <Footer />
       <Up />

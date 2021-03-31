@@ -187,7 +187,10 @@ function Pricing() {
                 </PriceSignup>
                     {open && (
                         <Modal open={open} toggle={setOpen}>
-                            <RegForm />
+                            <Switch>  
+                                <RegForm />
+                                <Route path="/profile" component={Profile} />
+                            </Switch>
                         </Modal>
                         )}
             </PricingRow>
