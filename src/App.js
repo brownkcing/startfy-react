@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header.js';
 import Intro from './components/Intro.js';
@@ -22,6 +22,8 @@ function App() {
   return (
     <div className="App">
       <GlobalStyles />
+      <Switch>
+      <Route path="/"> 
       <Header />
       <Intro />
       <Content />    
@@ -29,6 +31,11 @@ function App() {
       <CTA />
       <Footer />
       <Up />
+      </Route> 
+      </Switch>
+      <Switch>
+        <Route  path="/profile" component={Profile} />  
+      </Switch>   
     </div>
   );
 }

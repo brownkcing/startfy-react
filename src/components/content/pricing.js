@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'aos/dist/aos.css'
-import { Switch, Route } from 'react-router-dom';
+import { NavLink, Route, Switch } from 'react-router-dom';
 import Profile from '../authentication/Profile';
 import * as Mixins from '../../styles/Mixins';
 import { mediaMin } from '../../styles/MediaQueries';
 import useToggle from '../modal/useToggle';
 import Modal from '../modal/Modal';
 import RegForm from '../authentication/RegForm';
+
 
 const PricingContainer = styled.div`
     margin-top: 16em;
@@ -136,6 +137,7 @@ const PriceSignup = styled.div`
 
 function Pricing() {
     const [open, setOpen] = useToggle(false);
+
     return (
         <PricingContainer id='pricing'>
             <PricingRow data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500">
@@ -155,7 +157,7 @@ function Pricing() {
                         </ul>
                         <div>
                             <strong>$399</strong>
-                            <p><button type="button" onClick={() => setOpen()}>Choose Plan</button></p>
+                            <p><NavLink to="/signup" type="button" onClick={() => setOpen()}>Choose Plan</NavLink></p>
                         </div>
                     </div>
                 </PriceSignup>
