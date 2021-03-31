@@ -44,17 +44,17 @@ const LoginTitle = styled.h1`
 `;
 
 const Profile = () => {
-        const userLogged = AuthService.getCurrentUser();
-        const logOut = () => {
-            AuthService.logout();
-          };
+        // const userLogged = AuthService.getCurrentUser();
+        // const logOut = () => {
+        //     AuthService.logout();
+        //   };
     return (
         <UserWrap>
-            <LoginTitle>Welcome {userLogged.username}</LoginTitle>
-            <UserPage>
+            {/* <LoginTitle>Welcome {userLogged.username}</LoginTitle> */}
+            <UserPage>Henlo
                 <UserContent>
-                   <UserLabel><label>This is {userLogged.username} authenticated personal page.</label></UserLabel> 
-                   <UserLabel><span>Click to</span> <a href="/login" onClick={logOut}>logout</a> <span>and return back to previous page</span></UserLabel>  
+                   {/* <UserLabel><label>This is {userLogged.username} authenticated personal page.</label></UserLabel> 
+                   <UserLabel><span>Click to</span> <a href="/login" onClick={logOut}>logout</a> <span>and return back to previous page</span></UserLabel>   */}
                 </UserContent>
             </UserPage>
         </UserWrap>

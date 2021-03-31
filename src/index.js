@@ -4,13 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import Profile from './components/authentication/Profile';
 
 ReactDOM.render(
   <BrowserRouter> 
-        <App />
+      <Switch> 
+        <Route path="/">
+          <App />
+        </Route>
+        <Route exact path="/profile">
+          <Profile />
+        </Route>
+      </Switch>    
   </BrowserRouter>,
   document.getElementById('root')
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
