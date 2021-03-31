@@ -25,7 +25,9 @@ function App() {
       <Intro />
       <Content />
       <Contact />
-      <Route path="/profile" component={Profile} />
+      <Switch>
+        <Route path="/profile" component={Profile} />
+      </Switch>
       <CTA />
       <Footer />
       <Up />
