@@ -95,7 +95,8 @@ const Form = () => {
 
     const handleClick = (e) => {
         e.preventDefault();
-    }
+        setSuccess(true);
+    };
 
     useEffect(() => {
         setTimeout(()=>{
@@ -145,7 +146,7 @@ const Form = () => {
                             required />
                     </InputStyle>
                     <InputStyle>
-                        <Button onClick={() => { handleClick(); setSuccess(true);}} type="submit">Submit</Button>
+                        <Button onClick={handleClick} type="submit">Submit</Button>
                     </InputStyle>
                 </FormRow>
                     {success && (
