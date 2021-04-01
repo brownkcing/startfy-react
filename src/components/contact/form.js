@@ -91,42 +91,62 @@ const InputStyle = styled.div`
 
 
 const Form = () => {
+    const [success, setSuccess] = useState(false);
+
+    useEffect(() => {
+        if ( window.location.search.includes('success=true') ) {
+          setSuccess(true);
+        }
+      }, []);
+
     return (
         <React.Fragment>
-            <FormStyle>
+            <FormStyle
+                name="contact" 
+                method="POST" 
+                data-netlify="true" 
+            >
                 <FormRow>
                     <InputStyle>
+                    <input type="hidden" name="form-name" value="contact" />
                         <Label>Name: </Label>
                         <Input 
+                            name="name"
                             placeholder="Name" 
                             type='text'
                             required/>
                     </InputStyle>
                     <InputStyle>
                         <Label>Email: </Label>
-                        <Input 
+                        <Input
+                            name="email" 
                             placeholder="Email"
                             type='email'
                             required />
                     </InputStyle>
                     <InputStyle>
                         <Label>Subject: </Label>
-                        <Input 
+                        <Input
+                            name="subject"  
                             placeholder="Subject"
                             type='text'
                             required />
                     </InputStyle>
                     <InputStyle>
                         <Label>Message: </Label>
-                        <TextArea 
+                        <TextArea
+                            name="message" 
                             placeholder="Messages"
                             type='text'
                             required />
                     </InputStyle>
                     <InputStyle>
-                        <Button>Submit</Button>
+                        <Button type="submit">Submit</Button>
                     </InputStyle>
                 </FormRow>
+                    {success && (
+                        <p style={{ color: "green" }}>Thanks for your message! </p>
+                        )}
             </FormStyle>
         </React.Fragment>
     )
