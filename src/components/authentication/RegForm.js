@@ -7,6 +7,7 @@ import Tabs from './Tabs';
 import AuthService from './services/auth.service';
 
 
+
 const FormContainer = styled.div`
     margin: 0;
     width: auto;
@@ -16,6 +17,7 @@ const FormContainer = styled.div`
 
 const RegForms = () => {
     const [currentUser, setCurrentUser] = useState(undefined);
+
     useEffect(() => {
         const user = AuthService.getCurrentUser();
         if (user) {

@@ -10,14 +10,14 @@ import RegForm from '../authentication/RegForm';
 
 
 const PricingContainer = styled.div`
-    margin-top: 16em;
     ${Mixins.container}
+    margin-top: 16em;
 `;
 
 const PricingRow = styled.div`
+    ${Mixins.row}
     justify-content: center;
     text-align: center;
-    ${Mixins.row}
 `;
 
 const PriceTitle = styled.div`
@@ -137,7 +137,6 @@ const Linker = styled(Link)`
 
 function Pricing() {
     const [open, setOpen] = useToggle(false);
-
     return (
         <PricingContainer id='pricing'>
             <PricingRow data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500">

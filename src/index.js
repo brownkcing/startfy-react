@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Profile from './components/authentication/Profile';
+import Unauthorized from './components/Unauthorized';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
-import Profile from './components/authentication/Profile';
-import Login from './components/authentication/Login';
-import SignUp from './components/authentication/SignUp';
+import ProtectedRoute from './components/authentication/services/protected-route';
+
+
 
 ReactDOM.render(
   <BrowserRouter>
@@ -15,7 +17,8 @@ ReactDOM.render(
      <Route exact path="/"component={App} />
       <Route exact path="/signup" component={App} />
       <Route exact path="/login" component={App} />
-      <Route path={["/profile/", "/profile"]} component={Profile} />  
+      <ProtectedRoute path={["/profile/", "/profile"]} component={Profile} />  
+      <Route exact path='/unauthorized' component={Unauthorized} />
     </Switch>   
   </BrowserRouter>,
   document.getElementById('root')

@@ -54,6 +54,7 @@ const HenloFriend = styled.img`
 
 const Profile = () => {
         const userLogged = AuthService.getCurrentUser();
+        
         const logOut = () => {
             AuthService.logout();
           };
