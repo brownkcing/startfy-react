@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'aos/dist/aos.css'
-import { Link, Route, Switch } from 'react-router-dom';
-import Profile from '../authentication/Profile';
+import { Link } from 'react-router-dom';
 import * as Mixins from '../../styles/Mixins';
 import { mediaMin } from '../../styles/MediaQueries';
 import useToggle from '../modal/useToggle';
@@ -79,19 +78,6 @@ const PriceSignup = styled.div`
                 p {
                     margin-top: 0;
                     margin-bottom: 1rem;
-                     button {
-                        text-decoration: none;
-                        background: #fff;
-                        border: 0.2rem solid #f1f1f1;
-                        border-radius: 0.25rem;
-                        box-shadow: 0 0.25em 0.5em 0 rgb(0 0 0 / 20%);
-                        padding: 1em 2em;
-                        font-size: 1rem;
-                        line-height: 1.5;
-                        display: inline-block;
-                        font-weight: 400;
-                        color: #212529;                 
-                        }
                     }
                 }
             }
@@ -134,6 +120,20 @@ const PriceSignup = styled.div`
     `};
 `;
 
+const Linker = styled(Link)`
+    text-decoration: none;
+    background: #fff;
+    border: 0.2rem solid #f1f1f1;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.25em 0.5em 0 rgb(0 0 0 / 20%);
+    padding: 1em 2em;
+    font-size: 1rem;
+    line-height: 1.5;
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;                 
+`;
+
 
 function Pricing() {
     const [open, setOpen] = useToggle(false);
@@ -157,7 +157,7 @@ function Pricing() {
                         </ul>
                         <div>
                             <strong>$399</strong>
-                            <p><Link to="/signup" type="button" onClick={() => setOpen()}>Choose Plan</Link></p>
+                            <p><Linker to="/signup" type="button" onClick={() => setOpen()}>Choose Plan</Linker></p>
                         </div>
                     </div>
                 </PriceSignup>
@@ -171,7 +171,7 @@ function Pricing() {
                             <li>Free entry to paid events for a limited time</li>
                         </ul>
                         <div><strong>$699</strong>
-                            <p><button type="button" onClick={() => setOpen()}>Choose Plan</button></p>
+                            <p><Linker to="/signup" type="button" onClick={() => setOpen()}>Choose Plan</Linker></p>
                         </div>
                     </div>
                 </PriceSignup>
@@ -185,7 +185,7 @@ function Pricing() {
                             <li>Free entry to paid events for a year</li>
                         </ul>
                         <div><strong>$1299</strong>
-                            <p><button type="button" onClick={() => setOpen()}>Choose Plan</button></p>
+                            <p><Linker to="/signup" type="button" onClick={() => setOpen()}>Choose Plan</Linker></p>
                         </div>
                     </div>
                 </PriceSignup>

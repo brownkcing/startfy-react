@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import { Switch, Route, withRouter } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header.js';
 import Intro from './components/Intro.js';
@@ -10,9 +9,6 @@ import Contact from './components/Contact';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Up from './components/Up';
-import Profile from './components/authentication/Profile';
-
-
 
 function App() {
   useEffect (() => {

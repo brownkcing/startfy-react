@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import * as Mixins from '../../styles/Mixins';
 import AuthService from './services/auth.service';
+import Henlo from '../../img/henlo.png'
 
 const UserWrap = styled.div`
     display:flex;
@@ -27,34 +28,43 @@ const UserPage = styled.div`
 
 const UserContent = styled.div`
     display:block;
-    height: 30vh;
+    height: auto;
 `;
 
 
 const UserLabel = styled.div`
+    text-align: center;
     padding: 2em;
     label {
         text-align: center;
     }
 `;
 
-
 const LoginTitle = styled.h1`
     align-self:center;
 `;
 
+const HenloFriend = styled.img`
+    display: block;
+    margin-left: 3em;
+    margin-right: auto;
+    width: 70%;
+}
+`;
+
 const Profile = () => {
-        // const userLogged = AuthService.getCurrentUser();
-        // const logOut = () => {
-        //     AuthService.logout();
-        //   };
+        const userLogged = AuthService.getCurrentUser();
+        const logOut = () => {
+            AuthService.logout();
+          };
     return (
         <UserWrap>
-            {/* <LoginTitle>Welcome {userLogged.username}</LoginTitle> */}
-            <UserPage>Henlo
+            <LoginTitle>Welcome {userLogged.username}</LoginTitle>
+            <UserPage>
                 <UserContent>
-                   {/* <UserLabel><label>This is {userLogged.username} authenticated personal page.</label></UserLabel> 
-                   <UserLabel><span>Click to</span> <a href="/login" onClick={logOut}>logout</a> <span>and return back to previous page</span></UserLabel>   */}
+                   <UserLabel><label>This is {userLogged.username} authenticated personal page.</label></UserLabel> 
+                   <HenloFriend src={Henlo} /> 
+                   <UserLabel><span>Click to</span> <a href="/login" onClick={logOut}>logout</a> <span>and return back to previous page</span></UserLabel> 
                 </UserContent>
             </UserPage>
         </UserWrap>

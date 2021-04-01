@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import * as Mixins from '../styles/Mixins';
 import { mediaMin } from '../styles/MediaQueries';
+import Modal from './modal/Modal';
+import useToggle from './modal/useToggle';
+import RegForm from './authentication/RegForm';
 
 const CTAWrapper = styled.div`
     ${Mixins.wrapper}
@@ -58,13 +62,35 @@ const CTAButton = styled.div`
         }
     }
 `;
+
+const Linker = styled(Link)`
+    display: inline-block;
+    background: #000000;
+    color: #fff;
+    border: none;
+    border-radius: .25rem;
+    padding: 1rem 2rem;    
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+    text-decoration: none;
+`;
 export default function CTA() {
+    const [open, setOpen] = useToggle(false);
     return (
         <CTAWrapper>
             <CTAContainer>
                 <CTARow>
                     <CTAText><h2>What are you waiting for? Let's kickstart your kickstart!</h2></CTAText>
-                    <CTAButton><p><a>Sign-Up</a></p></CTAButton>
+                    <CTAButton><p><Linker to="/signup" type="button" onClick={() => setOpen()}>Sign-Up</Linker></p></CTAButton>
+                        {open && (
+                            <Modal open={open} toggle={setOpen}>
+                                <RegForm />
+                            </Modal>
+                            )}
                 </CTARow>
             </CTAContainer>
         </CTAWrapper>

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Color from '../../styles/Colors';
 import { mediaMax } from '../../styles/MediaQueries'
 import HeroImage from '../../img/hero-img.png';
-import { Link } from 'react-scroll';
 
 const Herostyle = styled.div`
     color: ${Color.whiteish};
