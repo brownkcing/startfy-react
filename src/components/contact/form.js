@@ -93,6 +93,10 @@ const InputStyle = styled.div`
 const Form = () => {
     const [success, setSuccess] = useState(false);
 
+    const handleClick = (e) => {
+        e.preventDefault();
+    }
+
     useEffect(() => {
         if ( window.location.search.includes('success=true') ) {
           setSuccess(true);
@@ -104,7 +108,8 @@ const Form = () => {
             <FormStyle
                 name="contact" 
                 method="POST" 
-                data-netlify="true" 
+                data-netlify="true"
+                action="/contact/?success=true"
             >
                 <FormRow>
                     <InputStyle>
@@ -141,7 +146,7 @@ const Form = () => {
                             required />
                     </InputStyle>
                     <InputStyle>
-                        <Button type="submit">Submit</Button>
+                        <Button onClick={handleClick} type="submit">Submit</Button>
                     </InputStyle>
                 </FormRow>
                     {success && (
