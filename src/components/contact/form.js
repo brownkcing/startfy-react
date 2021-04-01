@@ -98,9 +98,9 @@ const Form = () => {
     }
 
     useEffect(() => {
-        if ( window.location.search.includes('success=true') ) {
-          setSuccess(true);
-        }
+        setTimeout(()=>{
+            setSuccess(false)
+           }, 5000)
       }, []);
 
     return (
@@ -109,7 +109,6 @@ const Form = () => {
                 name="contact" 
                 method="POST" 
                 data-netlify="true"
-                action="/contact/?success=true"
             >
                 <FormRow>
                     <InputStyle>
@@ -146,7 +145,7 @@ const Form = () => {
                             required />
                     </InputStyle>
                     <InputStyle>
-                        <Button onClick={handleClick} type="submit">Submit</Button>
+                        <Button onClick={() => { handleClick(); setSuccess(true);}} type="submit">Submit</Button>
                     </InputStyle>
                 </FormRow>
                     {success && (
