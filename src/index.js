@@ -6,11 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 import Profile from './components/authentication/Profile';
+import Login from './components/authentication/Login';
+import SignUp from './components/authentication/SignUp';
 
 ReactDOM.render(
-  <BrowserRouter> 
-      <App /> 
- 
+  <BrowserRouter>
+   <Switch>
+     <Route exact path="/"component={App} />
+      <Route exact path="/signup" component={App} />
+      <Route exact path="/login" component={App} />
+      <Route exact path="/profile" component={Profile} />  
+    </Switch>   
   </BrowserRouter>,
   document.getElementById('root')
 );

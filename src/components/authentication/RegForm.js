@@ -28,8 +28,8 @@ const RegForms = () => {
             <Tabs />
             <Switch>
             <FormContainer>          
-                <Route exact path={"/signup"} component={SignUp}/>
-                <Route exact path="/login" component={Login}  />
+                <Route path="/signup" component={SignUp}/>
+                <Route path="/login" component={Login}  />
             </FormContainer>
             </Switch>
         </React.Fragment>

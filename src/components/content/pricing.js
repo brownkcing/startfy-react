@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'aos/dist/aos.css'
-import { NavLink, Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import Profile from '../authentication/Profile';
 import * as Mixins from '../../styles/Mixins';
 import { mediaMin } from '../../styles/MediaQueries';
@@ -157,7 +157,7 @@ function Pricing() {
                         </ul>
                         <div>
                             <strong>$399</strong>
-                            <p><NavLink to="/signup" type="button" onClick={() => setOpen()}>Choose Plan</NavLink></p>
+                            <p><Link to="/signup" type="button" onClick={() => setOpen()}>Choose Plan</Link></p>
                         </div>
                     </div>
                 </PriceSignup>

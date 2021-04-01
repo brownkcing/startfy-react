@@ -22,8 +22,6 @@ function App() {
   return (
     <div className="App">
       <GlobalStyles />
-      <Switch>
-      <Route path="/"> 
       <Header />
       <Intro />
       <Content />    
@@ -31,11 +29,6 @@ function App() {
       <CTA />
       <Footer />
       <Up />
-      </Route> 
-      </Switch>
-      <Switch>
-        <Route  path="/profile" component={Profile} />  
-      </Switch>   
     </div>
   );
 }
