@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styled, { css } from 'styled-components';
 import * as Mixins from '../../styles/Mixins';
 import { mediaMin } from '../../styles/MediaQueries';
