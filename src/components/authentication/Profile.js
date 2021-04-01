@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import * as Mixins from '../../styles/Mixins';
 import AuthService from './services/auth.service';
 import Henlo from '../../img/henlo.png'
 
@@ -18,9 +17,8 @@ const UserWrap = styled.div`
 `;
 
 const UserPage = styled.div`
-    ${Mixins.container}
     display:flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -33,7 +31,6 @@ const UserContent = styled.div`
 
 
 const UserLabel = styled.div`
-    text-align: center;
     padding: 2em;
     label {
         text-align: center;
@@ -42,6 +39,7 @@ const UserLabel = styled.div`
 
 const LoginTitle = styled.h1`
     align-self:center;
+    flex-wrap: wrap;
 `;
 
 const HenloFriend = styled.img`
@@ -54,7 +52,6 @@ const HenloFriend = styled.img`
 
 const Profile = () => {
         const userLogged = AuthService.getCurrentUser();
-        
         const logOut = () => {
             AuthService.logout();
           };

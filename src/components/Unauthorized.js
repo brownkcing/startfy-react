@@ -1,9 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
+import unauthpic from '../img/unauthorized.jpg';
 
-export default function Unauthorized() {
-    return(
+const UnauthorizedPic = styled.img`
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+`;
+
+export default function Unauthorized () {
+    return (
         <div>
-            Henlo friend, you're not authorized.
+            <UnauthorizedPic src={unauthpic} />
         </div>
     )
 }

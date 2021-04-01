@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 import ProtectedRoute from './components/authentication/services/protected-route';
+import FourOFour from './components/authentication/404';
 
 
 
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Route exact path="/login" component={App} />
       <ProtectedRoute path={["/profile/", "/profile"]} component={Profile} />  
       <Route exact path='/unauthorized' component={Unauthorized} />
+      <Route component={FourOFour} />
     </Switch>   
   </BrowserRouter>,
   document.getElementById('root')
