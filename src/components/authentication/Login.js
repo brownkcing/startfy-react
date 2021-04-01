@@ -2,7 +2,8 @@ import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
 import * as Mixins from '../../styles/Mixins';
 import Form from 'react-validation/build/form';
-import Input from 'react-validation/build/input';
+import Input from 'react-validation/build/input'
+import Loader from "react-loader-spinner";
 import CheckButton from 'react-validation/build/button';
 import AuthService from './services/auth.service';
 
@@ -28,6 +29,7 @@ const LoginTitle = styled.h1`
 
 const Forgot = styled.div`
     margin-bottom: 0.5em;
+    padding: 0 4.5em;
     a {
         text-decoration: none;
         color: #3F98FF;
@@ -41,6 +43,9 @@ const Button = styled(CheckButton)`
     ${Mixins.button};
 `;
 
+const Loader1 = styled(Loader)`
+  padding: 0 7em;
+`;
 const required = (value) => {
     if (!value) {
       return (
@@ -128,6 +133,10 @@ const Login = (props) => {
                 </LoginInput>       
                 <Button ref={checkBtn} disabled={loading} style={{color:'black'}}>{loading}Submit</Button>
                 <div style={{color:'red'}}>{message}</div>
+                {loading ? <Loader1 
+                      type="Rings" color="#00BFFF" height={60} width={60}
+                  /> : null
+                  }
                 <Forgot>Forgot <a href="#">Password?</a></Forgot>
             </LoginForm>
         </LoginWrap>

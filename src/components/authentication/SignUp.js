@@ -5,6 +5,7 @@ import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import CheckButton from 'react-validation/build/button';
 import AuthService from './services/auth.service';
+import Loader from "react-loader-spinner";
 import  { isEmail } from 'validator';
 
 const Signup = styled.div`
@@ -28,6 +29,10 @@ const SignUpTitle = styled.h1`
 
 const Button = styled(CheckButton)`
     ${Mixins.button};
+`;
+
+const Loader1 = styled(Loader)`
+  padding: 0 7em;
 `;
 
 const required = (value) => {
@@ -77,6 +82,7 @@ const SignUp = (props) => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
     const [successful, setSuccessful] = useState(false);
     const [message, setMessage] = useState("");
 
@@ -97,7 +103,7 @@ const SignUp = (props) => {
     
       const handleRegister = (e) => {
         e.preventDefault();
-    
+        setLoading(true);
         setMessage("");
         setSuccessful(false);
     
@@ -108,6 +114,7 @@ const SignUp = (props) => {
             (response) => {
               setMessage(response.data.message);
               setSuccessful(true);
+              setLoading(false);
             },
             (error) => {
               const resMessage =
@@ -116,7 +123,7 @@ const SignUp = (props) => {
                   error.response.data.message) ||
                 error.message ||
                 error.toString();
-    
+              setLoading(false);
               setMessage(resMessage);
               setSuccessful(false);
             }
@@ -173,7 +180,11 @@ const SignUp = (props) => {
                 {message}
               </div>
             </div>
-          )}   
+          )} 
+          {loading ? <Loader1 
+                      type="Rings" color="#00BFFF" height={60} width={60}
+                  /> : null
+                  }  
             </SignupForm>
         </Signup>
     );
