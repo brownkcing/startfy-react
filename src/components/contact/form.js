@@ -148,10 +148,10 @@ const Form = () => {
                     <InputStyle>
                         <Button onClick={handleClick} type="submit">Submit</Button>
                     </InputStyle>
-                </FormRow>
                     {success && (
                         <p style={{ color: "green" }}>Thanks for your message! </p>
                         )}
+                </FormRow>
             </FormStyle>
         </React.Fragment>
     )
