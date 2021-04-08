@@ -10,7 +10,6 @@ const Headerstyle = styled.div`
     background-image: url(${BackgroundImg});
     height: 110vh;
     width: 100vw;
-    padding: 140px 0px 100px;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;

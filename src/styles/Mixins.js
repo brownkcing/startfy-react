@@ -39,6 +39,7 @@ export const button = css`
     border-color: #3F98FF;
     font-size: 1rem;
     font-weight: 400;
+    color: white;
     cursor: pointer;
     line-height: 1.5;
     border-radius: .25rem;
